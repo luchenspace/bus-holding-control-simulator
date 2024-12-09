@@ -1,7 +1,3 @@
-// •	X-axis: Red
-// •	Y-axis: Green
-// •	Z-axis: Blue
-
 export function Legend() {
   return (
     <div className='fixed top-0 left-0 p-4'>

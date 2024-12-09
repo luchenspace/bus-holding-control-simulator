@@ -33,17 +33,16 @@ export default function Simulator() {
     <>
       <Legend />
       <Canvas>
-      <gridHelper args={[1000, 1000]} />
-      <OrbitControls />
-      <axesHelper args={[100]} />
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[10, 10, 10]} intensity={3} />
-      <Suspense fallback={null}>
-        <Bus curve={curve} />
-      </Suspense>
-      <RouteLine curve={curve} />
-    </Canvas>
+        <gridHelper args={[1000, 1000]} />
+        <OrbitControls />
+        <axesHelper args={[100]} />
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[10, 10, 10]} intensity={3} />
+        <Suspense fallback={null}>
+          <Bus curve={curve} />
+        </Suspense>
+        <RouteLine curve={curve} />
+      </Canvas>
     </>
-
   );
 }
