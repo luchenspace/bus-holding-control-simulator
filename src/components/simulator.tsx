@@ -1,12 +1,12 @@
 'use client';
 
-import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import { CatmullRomCurve3, Vector3 } from 'three';
 import { Bus } from './bus';
 import { Legend } from './legend';
 import RouteLine from './route';
+import Scene from './scene';
 
 function createRandomLoopRoute(radius = 50, numPoints = 10) {
   const points = [];
@@ -33,11 +33,7 @@ export default function Simulator() {
     <>
       <Legend />
       <Canvas>
-        <gridHelper args={[1000, 1000]} />
-        <OrbitControls />
-        <axesHelper args={[100]} />
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[10, 10, 10]} intensity={3} />
+        <Scene />
         <Suspense fallback={null}>
           <Bus curve={curve} />
         </Suspense>
