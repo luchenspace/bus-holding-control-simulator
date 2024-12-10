@@ -23,7 +23,7 @@ export function Bus({ curve }: { curve: CatmullRomCurve3 }) {
 
   return (
     <mesh ref={busRef}>
-      <group position={[3.5, 0, -4]}>
+      <group position={[3.5, 0, 8]}>
         <primitive
           object={gltf.scene}
           scale={0.0001}
